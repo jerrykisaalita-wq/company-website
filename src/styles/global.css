@@ -1,0 +1,339 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section,
+[id] {
+  scroll-margin-top: 96px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: clip;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Container */
+.cosmoq-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (max-width: 809px) {
+  .cosmoq-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .cosmoq-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Typography Hierarchy matching live COSMOQ */
+.typo-h1 {
+  font-family: var(--font-display);
+  font-size: 82px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.typo-h2 {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.typo-h3 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.typo-h4 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.typo-body-lg {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.typo-body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.typo-body-sm {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1199px) {
+  .typo-h1 {
+    font-size: 62px;
+  }
+  .typo-h2 {
+    font-size: 44px;
+  }
+  .typo-h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 809px) {
+  .typo-h1 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+  .typo-h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .typo-h3 {
+    font-size: 24px;
+  }
+  .typo-h4 {
+    font-size: 20px;
+  }
+}
+
+/* Signature Dual-Tone Luminous Card Surface */
+.cosmoq-card {
+  position: relative;
+  background-color: var(--color-bg-deep);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card-lg);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.cosmoq-card-elevated {
+  position: relative;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-card-lg);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+/* Signature Glow Button Border (amber bottom-left + blue top-right) */
+.glow-btn-outer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    115deg,
+    rgba(255, 205, 125, 0.92) 0%,
+    rgba(255, 172, 10, 0.42) 28%,
+    rgba(255, 255, 255, 0.16) 50%,
+    rgba(1, 117, 255, 0.62) 75%,
+    rgba(1, 117, 255, 0.98) 100%
+  );
+  box-shadow:
+    -6px 5px 22px rgba(255, 172, 10, 0.26),
+    6px -5px 22px rgba(1, 117, 255, 0.3),
+    0 2px 10px rgba(0, 0, 0, 0.35);
+  transition: box-shadow 0.25s ease, transform 0.2s ease, filter 0.25s ease;
+  cursor: pointer;
+}
+
+.glow-btn-outer:hover {
+  box-shadow:
+    -10px 6px 32px rgba(255, 172, 10, 0.42),
+    10px -6px 32px rgba(1, 117, 255, 0.48),
+    0 4px 14px rgba(0, 0, 0, 0.45);
+  filter: brightness(1.08);
+}
+
+.glow-btn-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 26px;
+  border-radius: var(--radius-pill);
+  background: radial-gradient(
+      120% 120% at 15% 85%,
+      rgba(255, 172, 10, 0.2) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      120% 120% at 85% 15%,
+      rgba(1, 117, 255, 0.24) 0%,
+      transparent 55%
+    ),
+    #030407;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.glow-btn-outer.sm .glow-btn-inner {
+  padding: 10px 22px;
+  font-size: 14px;
+}
+
+/* Dual-tone luminous tile border (COSMOQ 40deg golden-to-blue rim + warm drop glow) */
+.luminous-tile {
+  position: relative;
+  border-radius: 20px;
+  padding: 1.5px;
+  background: linear-gradient(
+    40deg,
+    rgb(255, 205, 125) 0%,
+    rgb(12, 15, 22) 45%,
+    rgb(1, 117, 255) 100%
+  );
+  box-shadow:
+    0px 6px 24px 0px rgba(255, 179, 73, 0.25),
+    0px -4px 20px 0px rgba(1, 117, 255, 0.16);
+}
+
+.luminous-tile-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 19px;
+  background: radial-gradient(circle at 50% 0%, rgba(1, 117, 255, 0.12), transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(255, 172, 10, 0.12), transparent 60%),
+    #080a10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Marquee Animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-scroll-reverse 28s linear infinite;
+}
+
+.footer-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-scroll 34s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}

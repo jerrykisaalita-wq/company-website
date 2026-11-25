@@ -1,0 +1,96 @@
+/* COSMOQ Design System Tokens & Font Faces */
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/yDtI2UI8XcEg1W2je9XPN3Noo.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/syRNPWzAMIrcJ3wIlPIP43KjQs.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/bHYNJqzTyl2lqvmMiRRS6Y16Es.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/iwWTDc49ENF2tCHbqlNARXw6Ug.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/qITWJ2WdG0wrgQPDb8lvnYnTXDg.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Extracted Exact COSMOQ Color Tokens */
+  --color-bg-canvas: #000000;
+  --color-bg-deep: #06070a;
+  --color-bg-elevated: #0c0f16;
+  --color-bg-card: rgba(12, 15, 22, 0.72);
+  --color-bg-glass: rgba(255, 255, 255, 0.04);
+
+  --color-accent-blue: #0175ff;
+  --color-accent-amber: #ffac0a;
+  --color-accent-gold: #ffcd7d;
+  --color-accent-red: #ff2244;
+
+  --color-text-primary: #ffffff;
+  --color-text-soft: #d1d4e3;
+  --color-text-light: #cccccc;
+  --color-text-secondary: #9ba9c4;
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+  --color-border-faint: rgba(255, 255, 255, 0.07);
+  --color-border-slate: #2f3950;
+  --color-border-blue-tint: rgba(125, 164, 255, 0.16);
+
+  /* Typography */
+  --font-display: "Inter Display", "Inter", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Radii */
+  --radius-pill: 999px;
+  --radius-card-lg: 24px;
+  --radius-card-md: 16px;
+  --radius-card-sm: 12px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --section-py: 80px;
+}
